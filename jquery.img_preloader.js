@@ -24,6 +24,24 @@
           fail()
         }
       })
+    },
+    preLoadURLs: function(urls, success, fail) {
+      var len = urls.length
+      var count = 0
+
+      if (len > 0) {
+        for (var i = 0; i < len; i++) {
+          var img = new Image()
+          img.src = urls[i]
+          img.onload = function() {
+            if (++count == len) success()
+          }
+          img.onerror = function() {
+            fail()
+          }
+        }
+      } else
+        success()
     }
   }
 })(jQuery)
