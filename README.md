@@ -1,4 +1,4 @@
-# jquery_img_preloader
+# jquery-img-preloader
 
 一个简单的图片预加载的jQuery小插件，代码的严谨性有待完善。
 
